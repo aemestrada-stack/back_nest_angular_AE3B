@@ -18,3 +18,8 @@ Content-Type: application/json
     "password":"1234567"
 
 }
+
+### users
+GET http://127.0.0.1:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3OTQ0OTMwMzMsImV4cCI6MTc5NDQ5NjYzM30.w6VZ-oAOpQB_iXiQ_2WtIZfN_W4FMt5TlEYk94lnfUs
+
