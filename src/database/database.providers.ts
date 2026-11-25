@@ -1,9 +1,11 @@
 import { DataSource } from 'typeorm';
+import { ConfigService } from '../config/config.service.js';
 
 export const databaseProviders = [
     {
         provide: 'DATABASE_CONNECTION',
-        useFactory: () => {
+        inject: [ConfigService],
+        useFactory: (config: ConfigService) => {
             const dataSource = new DataSource({
                 type:'postgres',
                 host:'localhost',
