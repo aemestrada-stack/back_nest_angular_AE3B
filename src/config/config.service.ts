@@ -1,11 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import * as fs from 'fs';
 import { parse } from 'dotenv';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 @Injectable()
 export class ConfigService {
@@ -13,7 +8,7 @@ export class ConfigService {
     constructor(){
 
         const env =process.env.NODE_ENV || 'development'
-        const envFilePath= `${__dirname}/../../.env${env}`
+        const envFilePath= `${__dirname}/../../.env.${env}`
         console.log("*********",envFilePath)
 
         const isDevelopmentEnv = process.env.NODE_ENV !== 'production'
